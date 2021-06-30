@@ -38,6 +38,6 @@ $sql = "CREATE TABLE IF NOT EXISTS $db.$table (
 )";
 
 //if ($conn->query($sql) === TRUE) { echo "Created table<br>"; }
-else { echo "Error creating table: " . $conn->error; }
+//else { echo "Error creating table: " . $conn->error; }
 
 ?>
