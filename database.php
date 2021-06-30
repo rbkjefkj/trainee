@@ -2,6 +2,7 @@
 $url = parse_url(getenv("mysql://b6f485efe42b17:09a9eefd@us-cdbr-east-04.cleardb.com/heroku_1fa947a4ab27316?reconnect=true"));
 
 $server = $url["host"];
+echo $server;
 $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
