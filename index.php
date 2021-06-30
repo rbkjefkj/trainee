@@ -7,7 +7,7 @@
 <body>
 	<header id="index-header">
 		<h1>Product List</h1>
-		<input type="button" value="ADD" onclick="window.location.href='./add-product'">
+		<input type="button" value="ADD" onclick="window.location.href='./add-product.html'">
 		<form id="del" action="./delete.php" method="POST"><input type="submit" value="MASS DELETE" id="delete-product-btn"></form>
 	</header>
 	<main>
