@@ -1,9 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+//$servername = "localhost";
+//$username = "root";
+//$password = "";
+$servername = 'us-cdbr-east-04.cleardb.com';
+$username = 'b6f485efe42b17';
+$password = '09a9eefd';
 
-// Create & check connection
+// Create & check connectionnnnn
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
