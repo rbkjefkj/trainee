@@ -5,6 +5,8 @@ $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
+echo $server;
+echo $username;
 //$servername = "localhost";
 //$username = "root";
 //$password = "";
@@ -12,7 +14,7 @@ $db = substr($url["path"], 1);
 $table = 'product';
 
 // Create & check connectionnnnn
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($server, $username, $password);
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
 $sql = "CREATE DATABASE IF NOT EXISTS $db";
