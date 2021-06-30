@@ -12,13 +12,11 @@
 	</header>
 	<main>
 	<?php
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
+	include './database.php';
 
 	if (empty($_GET)) {
 		$conn = new mysqli($servername, $username, $password);
-	  	$sql = "SELECT * FROM inventory.product";
+	  	$sql = "SELECT * FROM $db.$table";
 	  	foreach ($conn->query($sql) as $row) {
 			echo '<div class="product-box">';
 			echo "<input form='del' type='checkbox' class='delete-checkbox' name='check[]' value='".$row['id']."'>";
