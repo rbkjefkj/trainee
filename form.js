@@ -1,5 +1,5 @@
 let err = document.getElementById('error');
-let form = document.getElementById('form');
+let form = document.getElementById('product_form');
 let price = document.getElementById('price');
 let intRX = /^[0-9]+$/;
 let priceRX = /^[0-9]+(\.?[0-9]+)?$/;

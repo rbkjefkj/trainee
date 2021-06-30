@@ -48,7 +48,7 @@ h1 {
 	font-family: Arial;
 }
 
-#form {
+#product_form {
 	width: 275px;
 	display: flex;
 	flex-direction: column;
