@@ -3,8 +3,8 @@
 //$username = "root";
 //$password = "";
 $servername = 'us-cdbr-east-04.cleardb.com';
-$username = 'b6f485efe42b17';
-$password = '09a9eefd';
+$username = '';
+$password = '';
 
 // Create & check connectionnnnn
 $conn = new mysqli($servername, $username, $password);
