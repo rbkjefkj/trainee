@@ -1,5 +1,5 @@
 <?php
-$url = parse_url(getenv("mysql://b6f485efe42b17:09a9eefd@us-cdbr-east-04.cleardb.com/heroku_1fa947a4ab27316?reconnect=true"));
+$url = parse_url(getenv("mysql://b9de354d668753:7a3cb6ab@us-cdbr-east-04.cleardb.com/heroku_ce23877f9639e47?reconnect=true"));
 
 /*
 $server = $url["host"];
@@ -9,9 +9,9 @@ $db = substr($url["path"], 1);
 */
 
 $server = 'us-cdbr-east-04.cleardb.com';
-$username = 'b6f485efe42b17';
-$password = '09a9eefd';
-$db = 'heroku_1fa947a4ab27316';
+$username = 'b9de354d668753';
+$password = '7a3cb6ab';
+$db = 'heroku_ce23877f9639e47';
 
 //$servername = "localhost";
 //$username = "root";
