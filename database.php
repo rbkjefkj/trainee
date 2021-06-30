@@ -1,12 +1,10 @@
 <?php
 $url = parse_url(getenv("CLEARDB_CHARCOAL_URL"));
-
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-var_dump($server);
-var_dump($username);
-$db = substr($url["path"], 1);
+mysql://b9de354d668753:7a3cb6ab@us-cdbr-east-04.cleardb.com/heroku_ce23877f9639e47?reconnect=true
+$server = 'us-cdbr-east-04.cleardb.com';//$url["host"];
+$username = 'b9de354d668753';//$url["user"];
+$password = '7a3cb6ab';//$url["pass"];
+$db = 'heroku_ce23877f9639e47';//substr($url["path"], 1);
 
 /*
 $server = 'us-cdbr-east-04.cleardb.com';
