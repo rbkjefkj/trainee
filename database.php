@@ -24,8 +24,8 @@ $conn = new mysqli($server, $username, $password);
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
 $sql = "CREATE DATABASE IF NOT EXISTS $db";
-//if ($conn->query($sql) === TRUE) { echo "Created DB<br>"; }
-//else { echo "Error creating database: " . $conn->error; }
+if ($conn->query($sql) === TRUE) { echo "Created DB<br>"; }
+else { echo "Error creating database: " . $conn->error; }
 
 $sql = "CREATE TABLE IF NOT EXISTS $db.$table (
 	id INT AUTO_INCREMENT,
@@ -38,7 +38,7 @@ $sql = "CREATE TABLE IF NOT EXISTS $db.$table (
 	UNIQUE (sku)
 )";
 
-//if ($conn->query($sql) === TRUE) { echo "Created table<br>"; }
-//else { echo "Error creating table: " . $conn->error; }
+if ($conn->query($sql) === TRUE) { echo "Created table<br>"; }
+else { echo "Error creating table: " . $conn->error; }
 
 ?>
