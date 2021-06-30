@@ -3,18 +3,18 @@
 //$username = "root";
 //$password = "";
 $servername = 'us-cdbr-east-04.cleardb.com';
-$username = '';
-$password = '';
+$username = 'b6f485efe42b17';
+$password = '09a9eefd';
 
 // Create & check connectionnnnn
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
-$sql = "CREATE DATABASE IF NOT EXISTS inventory";
+$sql = "CREATE DATABASE IF NOT EXISTS heroku_1fa947a4ab27316";
 //if ($conn->query($sql) === TRUE) { echo "Created DB<br>"; }
 //else { echo "Error creating database: " . $conn->error; }
 
-$sql = "CREATE TABLE IF NOT EXISTS inventory.product (
+$sql = "CREATE TABLE IF NOT EXISTS heroku_1fa947a4ab27316.product (
 	id INT AUTO_INCREMENT,
 	sku VARCHAR(50) NOT NULL,
  	name VARCHAR(50) NOT NULL,
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 	$obj = new $type($size, $weight, $height, $width, $length);
 	$attribute = $obj->get_attribute();
-	$stmt = $conn->prepare("INSERT INTO inventory.product(sku, name, price, type, attribute) VALUES(?, ?, ?, ?, ?)");
+	$stmt = $conn->prepare("INSERT INTO heroku_1fa947a4ab27316.product(sku, name, price, type, attribute) VALUES(?, ?, ?, ?, ?)");
 	$stmt->bind_param("ssdss", $sku, $name, $price, $type, $attribute);
 	$stmt->execute();
 	$stmt->close();
