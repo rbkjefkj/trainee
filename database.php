@@ -1,12 +1,15 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = 'inventory';
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+//$servername = "localhost";
+//$username = "root";
+//$password = "";
+//$db = 'inventory';
 $table = 'product';
-//$servername = 'us-cdbr-east-04.cleardb.com';
-//$username = 'b6f485efe42b17';
-//$password = '09a9eefd';
 
 // Create & check connectionnnnn
 $conn = new mysqli($servername, $username, $password);
