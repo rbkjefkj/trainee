@@ -1,12 +1,18 @@
 <?php
 $url = parse_url(getenv("mysql://b6f485efe42b17:09a9eefd@us-cdbr-east-04.cleardb.com/heroku_1fa947a4ab27316?reconnect=true"));
 
+/*
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
-var_dump($server);
-var_dump($username);
+*/
+
+$server = 'us-cdbr-east-04.cleardb.com';
+$username = 'b6f485efe42b17';
+$password = '09a9eefd';
+$db = 'heroku_1fa947a4ab27316';
+
 //$servername = "localhost";
 //$username = "root";
 //$password = "";
