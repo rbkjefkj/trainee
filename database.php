@@ -1,12 +1,12 @@
 <?php
-$url = parse_url(getenv("CLEARDB_CHARCOAL_URL"));
-mysql://b9de354d668753:7a3cb6ab@us-cdbr-east-04.cleardb.com/heroku_ce23877f9639e47?reconnect=true
+$url = 'mysql://b9de354d668753:7a3cb6ab@us-cdbr-east-04.cleardb.com/heroku_ce23877f9639e47?reconnect=true';
 $server = 'us-cdbr-east-04.cleardb.com';//$url["host"];
 $username = 'b9de354d668753';//$url["user"];
 $password = '7a3cb6ab';//$url["pass"];
 $db = 'heroku_ce23877f9639e47';//substr($url["path"], 1);
 
 /*
+$url = parse_url(getenv("CLEARDB_DATABASE_URL")); somehow this doesn't wanna work
 $server = 'us-cdbr-east-04.cleardb.com';
 $username = 'b9de354d668753';
 $password = '7a3cb6ab';
