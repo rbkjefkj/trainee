@@ -1,0 +1,76 @@
+body { padding: 30px; }
+
+header {
+	display: flex;
+	border-bottom: 1px solid black;
+	padding: 25px;
+	margin-bottom: 30px;
+}
+
+#index-header { margin-bottom: 60px; }
+
+header input {
+	min-width: min-content;
+	height: min-content;
+	padding: 7px;
+	width: 65px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product-box {
+	width: 166px;
+	height: 166px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 7px;
+	/*box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;*/
+}
+
+.delete-checkbox { margin: 0 auto 10px 0; }
+
+label {
+	font-family: Arial;
+	margin-bottom: 7px;
+}
+
+h1 {
+	margin: 0 auto 0 0;
+	font-family: Arial;
+}
+
+#form {
+	width: 275px;
+	display: flex;
+	flex-direction: column;
+}
+
+#error { margin-left: 20px; }
+
+.cutefier { display: flex; }
+
+input, select {
+	width: min-content;
+	margin: 0 0 10px auto;
+}
+
+#DVD, #Furniture, #Book { display: none; margin-top: 30px; }
+#DVD input, #Furniture input, #Book input { display: none; }
+
+p { margin: 0; }
+
+.visible { display: block !important }
+
+#error {
+	color: red;
+	font-style: italic;
+}
