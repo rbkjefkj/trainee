@@ -4,6 +4,8 @@ $url = parse_url(getenv("CLEARDB_CHARCOAL_URL"));
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
+var_dump($server);
+var_dump($username);
 $db = substr($url["path"], 1);
 
 /*
