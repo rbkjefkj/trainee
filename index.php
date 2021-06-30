@@ -15,7 +15,7 @@
 	include './database.php';
 
 	if (empty($_GET)) {
-		$conn = new mysqli($servername, $username, $password);
+		$conn = new mysqli($server, $username, $password);
 	  	$sql = "SELECT * FROM $db.$table";
 	  	foreach ($conn->query($sql) as $row) {
 			echo '<div class="product-box">';
