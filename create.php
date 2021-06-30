@@ -10,7 +10,7 @@ $password = '09a9eefd';
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
-$sql = "CREATE DATABASE IF NOT EXISTS heroku_1fa947a4ab27316";
+//$sql = "CREATE DATABASE IF NOT EXISTS heroku_1fa947a4ab27316";
 //if ($conn->query($sql) === TRUE) { echo "Created DB<br>"; }
 //else { echo "Error creating database: " . $conn->error; }
 
