@@ -1,17 +1,17 @@
 <?php
-$url = parse_url(getenv("mysql://b9de354d668753:7a3cb6ab@us-cdbr-east-04.cleardb.com/heroku_ce23877f9639e47?reconnect=true"));
+$url = parse_url(getenv("CLEARDB_CHARCOAL_URL"));
 
-/*
 $server = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
 $db = substr($url["path"], 1);
-*/
 
+/*
 $server = 'us-cdbr-east-04.cleardb.com';
 $username = 'b9de354d668753';
 $password = '7a3cb6ab';
 $db = 'heroku_ce23877f9639e47';
+*/
 
 //$servername = "localhost";
 //$username = "root";
@@ -24,8 +24,8 @@ $conn = new mysqli($server, $username, $password);
 if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 
 $sql = "CREATE DATABASE IF NOT EXISTS $db";
-if ($conn->query($sql) === TRUE) { echo "Created DB<br>"; }
-else { echo "Error creating database: " . $conn->error; }
+//if ($conn->query($sql) === TRUE) { echo "Created DB<br>"; }
+//else { echo "Error creating database: " . $conn->error; }
 
 $sql = "CREATE TABLE IF NOT EXISTS $db.$table (
 	id INT AUTO_INCREMENT,
@@ -38,7 +38,7 @@ $sql = "CREATE TABLE IF NOT EXISTS $db.$table (
 	UNIQUE (sku)
 )";
 
-if ($conn->query($sql) === TRUE) { echo "Created table<br>"; }
+//if ($conn->query($sql) === TRUE) { echo "Created table<br>"; }
 else { echo "Error creating table: " . $conn->error; }
 
 ?>
