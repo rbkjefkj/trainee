@@ -43,10 +43,12 @@ label {
 	margin-bottom: 7px;
 }
 
-h1 {
+h1, h2 {
 	margin: 0 auto 0 0;
 	font-family: Arial;
 }
+
+h2 { padding-left:25px; } 
 
 #product_form {
 	width: 275px;

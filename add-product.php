@@ -1,17 +1,27 @@
+<?php
+include './product.php';
+
+if(isset($_POST['submit'])) {
+	$product = new $_POST['type']();
+	$product->create($_POST);
+}
+?>
+
 <!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="./style.css" rel="stylesheet">
+	<link href="../style.css" rel="stylesheet">
 </head>
 <body>
+	<!--put the php that sends req to classes.php when POST param is set-->
 	<header>
 		<h1>Product Add</h1>
-		<input type="submit" value="Save" form="product_form" class="visible">
+		<input type="submit" name="submit" value="Save" form="product_form" class="visible">
 		<input type="button" value="Cancel" class="visible" onclick="location.href='./'">
 	</header>
 	<div class="cutefier">
-	<form id="product_form" action="./create.php" method="POST">
+	<form id="product_form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
 		<div class="cutefier">
 			<label for="sku">SKU</label>
 			<input id="sku" autocomplete="off" class="visible" name="sku"><br>
@@ -65,6 +75,6 @@
 	</form>
 	<p id="error"></p>
 	</div>
-	<script src="./form.js"></script>
+	<script src="../form.js"></script>
 </body>
 </html>
